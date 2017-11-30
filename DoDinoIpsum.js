@@ -15,11 +15,11 @@ jQuery(document).ready(function() {
 				words: numWords
 			},
 			success: function(response) {
-				jQuery.each(response, function(itemName, item) {
+				jQuery.each(response, function(paragraphNum, paragraphWords) {
 					jQuery("div#Ipsum").append("<p>");
 					
-					jQuery.each(item, function (subItemName, subItem) {
-						jQuery("div#Ipsum").append(subItem + " ");
+					jQuery.each(paragraphWords, function (wordNum, word) {
+						jQuery("div#Ipsum").append(word + " ");
 					});
 					
 					jQuery("div#Ipsum").append("</p>");
